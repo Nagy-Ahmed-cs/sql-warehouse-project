@@ -1,0 +1,26 @@
+-- Use the 'master' database (the default system database in SQL Server)
+USE master;
+GO
+
+-- Create a new database named 'DataWarehouse'
+CREATE DATABASE DataWarehouse;
+GO
+
+-- Switch context to the newly created 'DataWarehouse' database
+USE DataWarehouse;
+GO
+
+-- Create the 'bronze' schema
+-- This schema typically stores raw or minimally processed data (e.g., directly ingested from source systems)
+CREATE SCHEMA bronze;
+GO
+
+-- Create the 'silver' schema
+-- This layer contains cleaned, validated, and possibly joined data ready for analytical use
+CREATE SCHEMA silver;
+GO
+
+-- Create the 'gold' schema
+-- This is the final layer where aggregated, highly curated data lives (used in dashboards or business reports)
+CREATE SCHEMA gold;
+GO
